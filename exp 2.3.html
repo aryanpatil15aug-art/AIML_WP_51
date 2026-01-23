@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+  <style>
+    /* Basic styling */
+    body {
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    /* First input field styling */
+    input:first-of-type {
+      border-radius: 20px;
+      border: 2px solid #0077cc;
+    }
+
+    /* Focus effect */
+    input:focus,
+    textarea:focus {
+      border-color: #2196f3;
+      outline: none;
+    }
+
+    /* Valid and invalid states */
+    input:valid,
+    select:valid,
+    textarea:valid {
+      border-color: green;
+    }
+
+    input:invalid,
+    select:invalid,
+    textarea:invalid {
+      border-color: red;
+    }
+
+    /* Radio group styling */
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .radio-group input[type="radio"] {
+      display: none;
+    }
+
+    .radio-group label {
+      padding: 8px 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* Checked radio styling */
+    .radio-group input[type="radio"]:checked + label {
+      border-color: #4caf50;
+      background-color: #c8e6c9;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      color: #2e7d32;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff9800;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #f57c00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <form>
+      <!-- Full Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <!-- Position -->
+      <label for="position">Position</label>
+      <select id="position" required>
+        <option value="" disabled selected>Select a position</option>
+        <option value="frontend">Front-end Developer</option>
+        <option value="backend">Back-end Developer</option>
+        <option value="designer">UI/UX Designer</option>
+      </select>
+
+      <!-- Availability Radio -->
+      <fieldset class="radio-group">
+        <legend>Availability</legend>
+        <input type="radio" id="fulltime" name="availability" value="fulltime" required>
+        <label for="fulltime">Full-Time</label>
+
+        <input type="radio" id="parttime" name="availability" value="parttime" required>
+        <label for="parttime">Part-Time</label>
+
+        <input type="radio" id="freelance" name="availability" value="freelance" required>
+        <label for="freelance">Freelance</label>
+      </fieldset>
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Enter your message" required></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>
