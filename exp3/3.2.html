@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playing Cards</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: radial-gradient(circle at top, #020617, #0f172a);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    /* Playing Cards Container */
+    #playing-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Card */
+    .card {
+      width: 180px;
+      height: 260px;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    /* Left, Middle, Right */
+    .left {
+      align-self: flex-start;
+    }
+
+    .middle {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2rem;
+      gap: 10px;
+    }
+
+    .right {
+      align-self: flex-end;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <main id="playing-cards">
+
+    <div class="card">
+      <div class="left">♠</div>
+      <div class="middle">
+        <div>A</div>
+        <div>♠</div>
+      </div>
+      <div class="right">♠</div>
+    </div>
+
+    <div class="card">
+      <div class="left">♥</div>
+      <div class="middle">
+        <div>K</div>
+        <div>♥</div>
+      </div>
+      <div class="right">♥</div>
+    </div>
+
+    <div class="card">
+      <div class="left">♦</div>
+      <div class="middle">
+        <div>Q</div>
+        <div>♦</div>
+      </div>
+      <div class="right">♦</div>
+    </div>
+
+  </main>
+
+</body>
+</html>

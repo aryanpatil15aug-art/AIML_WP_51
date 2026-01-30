@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Daily Grid</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: "Georgia", serif;
+      background: #f4f4f5;
+    }
+
+    /* Newspaper Grid Layout */
+    .newspaper-layout {
+      display: grid;
+      grid-template-areas:
+        "title title title"
+        "feature-article feature-article cover-image"
+        "secondary-article secondary-article cover-image"
+        "small-article1 small-article2 small-article3";
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Title */
+    .title {
+      grid-area: title;
+      background: #020617;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .title h1 {
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    /* Feature Article */
+    .feature-article {
+      grid-area: feature-article;
+      background: white;
+      padding: 20px;
+      border-left: 6px solid #2563eb;
+    }
+
+    /* Secondary Article */
+    .secondary-article {
+      grid-area: secondary-article;
+      background: white;
+      padding: 20px;
+      border-left: 6px solid #7c3aed;
+    }
+
+    /* Cover Image */
+    .cover-image {
+      grid-area: cover-image;
+      background: #e5e7eb;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-image img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    /* Small Articles */
+    .small-article1 {
+      grid-area: small-article1;
+    }
+
+    .small-article2 {
+      grid-area: small-article2;
+    }
+
+    .small-article3 {
+      grid-area: small-article3;
+    }
+
+    .small-article1,
+    .small-article2,
+    .small-article3 {
+      background: white;
+      padding: 15px;
+      border-top: 4px solid #22c55e;
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="newspaper-layout">
+
+    <header class="title">
+      <h1>The Daily Grid</h1>
+    </header>
+
+    <article class="feature-article">
+      <h2>Major Breakthrough in Web Technology</h2>
+      <p>
+        Developers around the world are embracing CSS Grid to build complex,
+        responsive layouts with ease and precision.
+      </p>
+    </article>
+
+    <article class="secondary-article">
+      <h2>Why Layouts Matter</h2>
+      <p>
+        A well-structured layout improves readability, accessibility, and
+        overall user experience across devices.
+      </p>
+    </article>
+
+    <figure class="cover-image">
+      <img src="https://via.placeholder.com/300x400" alt="Newspaper Cover">
+    </figure>
+
+    <article class="small-article1">
+      <h3>Design Trends</h3>
+      <p>
+        Minimalism and grid-based layouts continue to dominate modern design.
+      </p>
+    </article>
+
+    <article class="small-article2">
+      <h3>Tech News</h3>
+      <p>
+        CSS Grid and Flexbox remain essential tools for frontend developers.
+      </p>
+    </article>
+
+    <article class="small-article3">
+      <h3>Developer Tips</h3>
+      <p>
+        Understanding layout fundamentals saves time and reduces bugs.
+      </p>
+    </article>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    /* Navbar */
+    #navbar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100vh;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      padding: 20px;
+      box-shadow: 4px 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    #navbar header {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #22d3ee;
+    }
+
+    .nav-link {
+      display: block;
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #a78bfa;
+    }
+
+    /* Main Documentation */
+    #main-doc {
+      margin-left: 280px;
+      padding: 40px;
+    }
+
+    .main-section {
+      margin-bottom: 60px;
+    }
+
+    .main-section header {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    code {
+      display: block;
+      background: #020617;
+      border-left: 4px solid #22d3ee;
+      padding: 10px;
+      margin: 10px 0;
+      color: #a78bfa;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* Media Query */
+    @media (max-width: 768px) {
+      #navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+
+      #main-doc {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>Web Development Docs</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+    <a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a>
+    <a class="nav-link" href="#JavaScript_Fundamentals">JavaScript Fundamentals</a>
+    <a class="nav-link" href="#Best_Practices">Best Practices</a>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Web development is the process of building websites and web applications.</p>
+      <p>It combines structure, style, and behavior to create interactive experiences.</p>
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <ul>
+        <li>Frontend</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="HTML_Basics">
+      <header>HTML Basics</header>
+      <p>HTML provides the structure of a webpage.</p>
+      <p>Elements are represented using tags.</p>
+      <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+      <ul>
+        <li>Elements</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="CSS_Flexbox">
+      <header>CSS Flexbox</header>
+      <p>Flexbox is a layout system designed for one-dimensional layouts.</p>
+      <p>It helps align and distribute space efficiently.</p>
+      <code>display: flex;</code>
+      <ul>
+        <li>Layouts</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="JavaScript_Fundamentals">
+      <header>JavaScript Fundamentals</header>
+      <p>JavaScript adds interactivity to web pages.</p>
+      <p>It runs in the browser and responds to events.</p>
+      <code>console.log("Hello");</code>
+      <ul>
+        <li>Logic</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Best_Practices">
+      <header>Best Practices</header>
+      <p>Clean code improves readability and maintenance.</p>
+      <p>Consistency is key in long-term projects.</p>
+      <code>// Write readable code</code>
+      <ul>
+        <li>Maintainability</li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>

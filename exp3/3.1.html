@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Plans</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      padding: 50px;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      background: linear-gradient(90deg, #22d3ee, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    /* Pricing Container */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    /* Pricing Card */
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 0 0 200px;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      min-height: 280px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .pricing-card:hover::before {
+      opacity: 1;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.8);
+    }
+
+    .pricing-card h2 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .pricing-card p {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .pricing-card button {
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(90deg, #22d3ee, #a78bfa);
+      color: black;
+      font-size: 1rem;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #22d3ee;
+    }
+
+    /* Individual Plans */
+    .basic-plan {
+      order: 0;
+      box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
+    }
+
+    .pro-plan {
+      order: 1;
+      flex-grow: 2;
+      background: linear-gradient(
+        145deg,
+        rgba(167, 139, 250, 0.25),
+        rgba(34, 211, 238, 0.15)
+      );
+      box-shadow: 0 0 35px rgba(167, 139, 250, 0.9);
+    }
+
+    .premium-plan {
+      order: 2;
+      box-shadow: 0 0 25px rgba(244, 114, 182, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pricing Plans</h1>
+
+  <div class="pricing-container">
+
+    <div class="pricing-card basic-plan">
+      <h2>Basic</h2>
+      <p>$9/month</p>
+      <button>Activate</button>
+    </div>
+
+    <div class="pricing-card pro-plan">
+      <h2>Pro</h2>
+      <p>$19/month</p>
+      <button>Upgrade</button>
+    </div>
+
+    <div class="pricing-card premium-plan">
+      <h2>Premium</h2>
+      <p>$29/month</p>
+      <button>Unlock</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

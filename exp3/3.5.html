@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NovaPad</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(circle at top, #020617, #000000);
+      color: #e5e7eb;
+    }
+
+    /* HEADER */
+    #header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+      z-index: 1000;
+    }
+
+    #header-img {
+      height: 46px;
+      background-color: #ffffff;
+    }
+
+    #nav-bar {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #22d3ee, #a78bfa);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* PAGE OFFSET */
+    main {
+      padding-top: 140px;
+    }
+
+    section {
+      padding: 100px 40px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    /* STATEMENT HEADINGS */
+    .statement {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #22d3ee, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .subtext {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #c7d2fe;
+    }
+
+    /* VIDEO */
+    #video {
+      width: 100%;
+      max-width: 760px;
+      height: 420px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.6);
+      border: none;
+    }
+
+    /* FORM */
+    #form {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    #email {
+      padding: 14px;
+      width: 280px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: #020617;
+      color: white;
+      box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.3);
+    }
+
+    #submit {
+      padding: 14px 28px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(90deg, #22d3ee, #a78bfa);
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.8);
+    }
+
+    /* MEDIA QUERY */
+    @media (max-width: 768px) {
+      .statement {
+        font-size: 2.2rem;
+      }
+
+      #header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #nav-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <img
+      id="header-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+    >
+
+    <nav id="nav-bar">
+      <a class="nav-link" href="#power">POWER</a>
+      <a class="nav-link" href="#vision">VISION</a>
+      <a class="nav-link" href="#access">ACCESS</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="power">
+      <h2 class="statement">Built for the Next Decade</h2>
+      <p class="subtext">
+        NovaPad strips away distraction and amplifies focus.
+        Precision hardware. Zero compromise.
+      </p>
+    </section>
+
+    <section id="vision">
+      <h2 class="statement">See the Future in Motion</h2>
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="access">
+      <h2 class="statement">Get Access Before Everyone Else</h2>
+      <p class="subtext">
+        Join the early access list. Be ahead. Stay ahead.
+      </p>
+
+      <form
+        id="form"
+        action="https://www.freecodecamp.org/email-submit"
+      >
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <input
+          id="submit"
+          type="submit"
+          value="JOIN THE FUTURE"
+        >
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>
